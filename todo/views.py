@@ -14,8 +14,8 @@ def todo_list(request):
 
 
 def todo_retrieve(request, id):
-    todo = Todo.objects.get(id)
+    todo = Todo.objects.get(id=id)
     context = {
         "todo": todo
     }
-    return render(request, "todo/todo_detail.html", context)
+    return render(request, "todo/todo_retrieve.html", context)
