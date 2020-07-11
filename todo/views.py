@@ -12,6 +12,7 @@ def todo_list(request):
     }
     return render(request, "todo/todo_list.html", context)
 
+
 def todo_retrieve(request, id):
     todo = Todo.objects.get(id)
     context = {
