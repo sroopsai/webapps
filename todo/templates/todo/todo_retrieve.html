@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Todo </title>
+</head>
+<body>
+    {% if user.request.is_authenicated %}
+        Hello {{ user.request.username }}
+    {% else %}
+        Hello Anonymous User!
+    {% endif %}
+    <p>Todo: {{ todo.name }} and the due date is on {{ todo.date }}</p>
+</body>
+</html>
