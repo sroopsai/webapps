@@ -1,9 +1,9 @@
 
 from django.contrib import admin
-from django.urls import path
-from todo.views import todo_list
+from django.urls import path, include
+
 
 urlpatterns = [
-    path('todo_list/', todo_list),
     path('admin/', admin.site.urls),
+    path('todo_list/', include('todo.urls', namespace='todos'))
 ]
