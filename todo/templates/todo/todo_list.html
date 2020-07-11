@@ -12,7 +12,7 @@
     {% endif %}
     <ol>
         {% for todo in todos_list %}
-        <li>{{ todo.name }}, due is on {{ todo.due_date }}</li>
+         <li><a href="{{ todo.id }}">{{ todo.name }}, due is on {{ todo.due_date }}</a></li>
         {% endfor %}
     </ol>
 
