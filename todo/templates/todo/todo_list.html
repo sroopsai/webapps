@@ -2,9 +2,19 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Todo List</title>
 </head>
 <body>
-$END$
+    {% if request.user.is_authenicated %}
+        Hello {{ request.user.username }}
+    {% else %}
+        Hello Anonymous user!
+    {% endif %}
+    <ol>
+        {% for todo in todos_list %}
+        <li>{{ todo.name }}, due is on {{ todo.due_date }}</li>
+        {% endfor %}
+    </ol>
+
 </body>
 </html>
