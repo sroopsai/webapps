@@ -5,4 +5,4 @@ from django.http import HttpResponse
 # Create your views here.
 
 def todo_list(request):
-    pass
+    return render(request, 'todo/todo_list.html')
