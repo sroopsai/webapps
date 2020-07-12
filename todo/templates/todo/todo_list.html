@@ -10,6 +10,7 @@
     {% else %}
         Hello Anonymous user!
     {% endif %}
+    <p>Create a new <a href="create_todo">Todo</a></p>
     <ol>
         {% for todo in todos_list %}
          <li><a href="{{ todo.id }}">{{ todo.name }}, due is on {{ todo.due_date }}</a></li>
