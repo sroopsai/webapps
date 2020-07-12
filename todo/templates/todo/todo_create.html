@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Todo List</title>
+</head>
+<body>
+
+    <form method="post">
+        {% csrf_token %}
+        <input name="name" />
+        <input name="due_date" />
+        <input name="due_time" />
+        <button type="submit">Submit</button>
+    </form>
+
+</body>
+</html>
