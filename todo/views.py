@@ -24,11 +24,7 @@ def todo_retrieve(request, id):
 def todo_create(request):
     form = TodoForm(request.POST or None)
     if form.is_valid():
-        # create a Todo object
-        name = form.cleaned_data['name']
-        due_date = form.cleaned_data['due_date']
-        due_time = form.cleaned_data['due_time']
-        Todo.objects.create(name=name, due_date=due_date, due_time=due_time)
+        form.save()
         return redirect('/')
 
     context = {"form": form}
