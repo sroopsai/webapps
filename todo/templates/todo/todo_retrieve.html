@@ -10,6 +10,9 @@
     {% else %}
         Hello Anonymous User!
     {% endif %}
-    <p>Todo: {{ todo.name }} and the due date is on {{ todo.date }}</p>
+    <p>Todo: {{ todo.name }} and the due date is on {{ todo.due_date }} at {{ todo.due_time }}
+        <a href="update_todo">Update this todo</a>
+    </p>
+        <a href="delete_todo">Delete this todo</a>
 </body>
 </html>
