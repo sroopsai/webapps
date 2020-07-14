@@ -1,3 +1,3 @@
 ### The architecture:
 
-![alt text](https://github.com/sroopsai/webapps/architecture.png "Architecture")
+![alt text](https://github.com/sroopsai/webapps/blob/master/architecture.png "Architecture")
