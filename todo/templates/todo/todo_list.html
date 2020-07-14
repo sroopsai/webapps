@@ -1,21 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Todo List</title>
-</head>
-<body>
-    {% if request.user.is_authenicated %}
-        Hello {{ request.user.username }}
-    {% else %}
-        Hello Anonymous user!
-    {% endif %}
-    <p>Create a new <a href="create_todo">Todo</a></p>
-    <ol>
-        {% for todo in todos_list %}
-         <li><a href="{{ todo.id }}">{{ todo.name }}, due is on {{ todo.due_date }}</a></li>
-        {% endfor %}
-    </ol>
+{% extends "base.html" %}
+{% block content %}
+    <div class="text-center">
+        {% if request.user.is_authenicated %}
+            Hello {{ request.user.username }}
+        {% else %}
+            Hello Anonymous user!
+        {% endif %}
+        <p>Create a new <a class = "btn btn-primary" href="create_todo">Todo</a></p>
+    </div>
+    <div class="col-4 offset-4">
+        {% for todo in todos %}
+            <div class="card mt-3">
+                <div class="card-header">
+                    <a href="{{ todo.id }}">{{ todo.name }}</a>
+                </div>
+                <div class="card-body">
+                    <p>It's due is on {{ todo.due_date }}</p>
+                </div>
 
-</body>
-</html>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock content %}
